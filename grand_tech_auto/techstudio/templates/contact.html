@@ -1,0 +1,39 @@
+{% extends "test.html" %}
+
+<title>{% block title %}Contact Us{% endblock %}</title>
+
+{% block content %}
+    <H2>Contact Us</H2>
+    <div class="support">
+        <H4>We're here to help</H4>
+    </div>
+    <br>
+
+    <div class="contactext">
+        <H6>
+            We ask you to send us an email so if we need to investigating your issue further will be easier. Please make sure you fill out
+            the form completely and with as much detail as possible. Submit a general enquiry, feedback or complaint.
+            We will reply with 24hrs
+        </H6>
+    </div>
+    <div class="contact">
+
+        <form action="action_page.php">
+
+            <label for="fname">Full Name</label>
+            <input type="text" id="name" name="firstname" placeholder="Your name..">
+            <br>
+
+            <label for="lname">Email</label>
+            <input type="text" id="email" name="lastname" placeholder="Your email address..">
+            <br>
+            <label for="subject">Message</label>
+            <textarea id="subject" name="subject" placeholder="Your message.." style="height:100px"></textarea>
+            <br>
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+    <br><br>
+
+{% endblock %}

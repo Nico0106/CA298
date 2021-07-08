@@ -1,0 +1,68 @@
+{% extends "test.html" %}
+{% block title %}
+    {{ product.name}}
+{% endblock %}
+
+{% block content %}
+
+    {% if added %}
+        Added Product
+    {% endif %}
+
+    <div class="row">
+    <H2>{{ product.name }}</H2>
+  <div class="leftcolumn">
+      <div>
+          <div style="width:70%; "><img src="{{ product.picture.url }}" width=100%></div><br>
+
+    </div>
+</div>
+
+  <div class="rightcolumn">
+    <div class="card">
+        <h4>{{ product.name }}</h4>
+        <p class="singletext">Product Code: Case2{{ product.id }}</p>
+        <div> <p>Product description {{ product.description }}</p></div>
+        <h4>${{ product.price }}</h4>
+    <div class="bottom-wrap"> <a href="#" class="btn btn-primary float-right" data-abc="true"> Add to Cart </a>
+             <div class="price-wrap"> <a href="/" class="btn btn-warning float-left" data-abc="true">Go to cart </a> </div>
+    </div>
+    </div>
+  </div>
+    <h4>Return Policy</h4>
+    <div>
+    <p> Returns from Ireland are free and easy! We’ve gone paperless, you can return via our returns portal here.
+        <br>You have 28 days, from the day you receive it, to send something back. We cannot offer
+        refunds items that have been broken unless you have a valid warranty.</p>
+    </div>
+  <h3>You might also like</h3>
+    <div class="container">
+        <div class="tab1cards">
+            <div class="card">
+                <a href="/singleproduct/67">
+                    <h3>Playstation 5</h3>
+                    <img src="../static/images/game_dev7.jpg" height="260" alt="Pic" style="width:100%">
+                    <p>Experience lightning fast loading with an ultra-high...</p>
+                    <h4>$499.99</h4>
+                </a>
+            </div>
+            <div class="card">
+                <a href="/singleproduct/47">
+                    <h3>KSTN Keyboard</h3>
+                    <img src="../static/images/key4.jpg" height="260" alt="Pic" style="width:100%">
+                    <p>Bring sleek, contemporary styling to your desktop...</p>
+                    <h4>$139.99</h4>
+                </a>
+            </div><div class="card">
+                <a href="/singleproduct/68">
+                    <h3>Echo Dot</h3>
+                    <img src="../static/images/speaker8.jpg" height="260" alt="Pic" style="width:100%">
+                    <p>Meet the all-new Echo Dot—our most popular smart...</p>
+                    <h4>$49.99</h4>
+                </a>
+            </div>
+        </div>
+    <br><br>
+{% endblock %}
+</div>
+</div>

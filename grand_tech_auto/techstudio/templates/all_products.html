@@ -1,0 +1,18 @@
+{% extends "test.html" %}
+{% block title %}
+    All Products
+{% endblock %}
+{% block content %}
+        <div class="tab1cards">
+            {% for p in products %}
+                <div class="card">
+                    <a href="/singleproduct/{{ p.id }}">
+                        <h3>{{ p.name }}</h3>
+                        <div style="width:70%; "><img src=" {{ p.picture.url }}" width=100%></div>
+                        <h4>{{ p.price }}</h4>
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+{% endblock %}
